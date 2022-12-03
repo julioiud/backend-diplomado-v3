@@ -2,7 +2,6 @@ package co.edu.iudigital.helpmeuid.controller;
 
 import co.edu.iudigital.helpmeuid.dto.DelitoDTO;
 import co.edu.iudigital.helpmeuid.service.iface.IDelitoService;
-import co.edu.iudigital.helpmeuid.service.impl.DelitoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,5 +22,10 @@ public class DelitoController {
         return ResponseEntity
                 .ok()
                 .body(delitoService.findAll());
+    }
+
+    @GetMapping("/otra")
+    public ResponseEntity<Object> ejemplo(){
+        return ResponseEntity.ok().body("Otra cosa");
     }
 }
